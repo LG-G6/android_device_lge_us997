@@ -16,10 +16,13 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit + set some common Carbon stuff.
+TARGET_SCREEN_HEIGHT := 2880
+TARGET_SCREEN_WIDTH := 1440
+$(call inherit-product, vendor/carbon/config/gsm.mk)
+$(call inherit-product, vendor/carbon/config/common.mk)
 
 # Inherit from us997 device
 $(call inherit-product, device/lge/us997/device.mk)
@@ -30,7 +33,7 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH_OVERRIDE)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := us997
-PRODUCT_NAME := lineage_us997
+PRODUCT_NAME := carbon_us997
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-US997
 PRODUCT_MANUFACTURER := LGE
