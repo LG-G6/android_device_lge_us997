@@ -24,6 +24,10 @@ $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 # Inherit from us997 device
 $(call inherit-product, device/lge/us997/device.mk)
 
+# Evolution-X variables
+# WITH_GAPPS := true
+TARGET_BOOT_ANIMATION_RES := 1440
+
 # Security patch level
 PLATFORM_SECURITY_PATCH_OVERRIDE := 2019-02-01	
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH_OVERRIDE)
