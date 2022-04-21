@@ -14,8 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_us997.mk
+    $(LOCAL_DIR)/evolution_us997.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_us997-userdebug \
-    lineage_us997-eng
+    evolution_us997-user \
+    evolution_us997-userdebug \
+    evolution_us997-eng
